@@ -7,7 +7,13 @@ namespace StockNotifier.src.Repository
     {
         // Use NoSQL Document style storage, Primary key Broker ID, Sort key Ticker
         // E.g DynamoDb / CosmosDB
-        private static List<NotifyModel> TRADES = new List<NotifyModel>();
+        private static List<NotifyModel> TRADES;
+
+        public InMemoryNotifyRepository() 
+        {
+            TRADES = new List<NotifyModel>();
+        }
+
 
         public async Task<NotifyModel> AddTradeNotification(string brokerId, string ticker, decimal numberOfShares, decimal priceTraded)
         {

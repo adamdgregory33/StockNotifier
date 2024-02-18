@@ -22,7 +22,7 @@ namespace StockNotifier.src.Clients.Downstream
             // Assuming tickers are unique in collection, would be in practice
             return TICKERS
                 .Where(x => x.Ticker.Equals(ticker, StringComparison.OrdinalIgnoreCase))
-                .First();
+                .FirstOrDefault();
         }
 
         public List<TickerInfoModel> GetTickerInfos(List<string> tickers)
