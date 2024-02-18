@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StockNotifier.src.Clients.Downstream;
 using StockNotifier.src.Model.Internal.Controller.V1;
 
 namespace StockNotifier.src.Controller.V1
@@ -8,10 +9,14 @@ namespace StockNotifier.src.Controller.V1
     public class NotifyController : ControllerBase
     {
         private readonly INotifyRepository _notifyRepository;
+        private readonly ITickerInfoClient _tickerInfoClient;
 
-        public NotifyController(INotifyRepository notifyRepository)
+        public NotifyController(
+            INotifyRepository notifyRepository,
+            ITickerInfoClient tickerInfoClient)
         {
             _notifyRepository = notifyRepository;
+            _tickerInfoClient = tickerInfoClient;
         }
 
         // POST v1/api/<NotifyController>
@@ -31,7 +36,9 @@ namespace StockNotifier.src.Controller.V1
                     request.PriceTraded
                     );
 
-            return Accepted();
+            var tickerInfo = _tickerInfoClient.GetTickerInfo( request.BrokerId );
+
+            return Accepted(tickerInfo);
         }
 
     }
