@@ -6,12 +6,12 @@ namespace StockNotifier.src.Model.Internal.Controller.V1
     public class NotifyModel
     {
         [DataMember, Required]
-        public string BrokerName { get; }
+        public string? BrokerName { get; }
         [DataMember, Required]
-        public string BrokerId { get; }
+        public string? BrokerId { get; }
         [DataMember, Required]
-        public string Ticker { get; }
+        public string? Ticker { get; }
         [DataMember, Required]
-        public Decimal PriceTraded { get; }
+        public Decimal? PriceTraded { get; }
     }
 }

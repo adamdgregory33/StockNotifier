@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="src\Model\External\" />
+    <Folder Include="src\Repository\" />
   </ItemGroup>
 
 </Project>

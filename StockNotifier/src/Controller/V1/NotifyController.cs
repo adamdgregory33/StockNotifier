@@ -9,8 +9,13 @@ namespace StockNotifier.src.Controller.V1
     {
         // POST v1/api/<NotifyController>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
         public IActionResult Post([FromBody] NotifyModel request)
         {
+            if (request is null)
+                return BadRequest();
+
             return Accepted();
         }
 
