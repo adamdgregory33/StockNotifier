@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockNotifier", "StockNotifier.csproj", "{381DEB9D-1A62-4B8A-BDA1-7AA8236BDDCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockNotifier.Test", "..\StockNotifier.Test\StockNotifier.Test.csproj", "{1285C66C-46F9-40D1-842D-E29920291D4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{381DEB9D-1A62-4B8A-BDA1-7AA8236BDDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381DEB9D-1A62-4B8A-BDA1-7AA8236BDDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381DEB9D-1A62-4B8A-BDA1-7AA8236BDDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381DEB9D-1A62-4B8A-BDA1-7AA8236BDDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1285C66C-46F9-40D1-842D-E29920291D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1285C66C-46F9-40D1-842D-E29920291D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1285C66C-46F9-40D1-842D-E29920291D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1285C66C-46F9-40D1-842D-E29920291D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7440DF50-AF3C-4A45-9A7F-FA06A319D0A0}
+	EndGlobalSection
+EndGlobal
