@@ -27,8 +27,8 @@ namespace StockNotifier.src.Controller.V1
                 .AddTradeNotification(
                     request.BrokerId,
                     request.Ticker,
-                    request.NumberOfShares.Value,
-                    request.PriceTraded.Value
+                    request.NumberOfShares,
+                    request.PriceTraded
                     );
 
             return Accepted();

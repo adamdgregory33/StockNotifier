@@ -23,22 +23,22 @@ namespace StockNotifier.Test.Unit.Controller
         }
 
         [Fact]
-        public void Post_ValidData_ReturnsAccepted ()
+        public async Task Post_ValidData_ReturnsAccepted ()
         {
             var request = _fixture.Create<NotifyDto>();
 
-            var result = _controller.Post(request);
+            var result = await _controller.Post(request);
 
             Assert.NotNull(result);
             Assert.True(result is AcceptedResult);
         }
 
         [Fact]
-        public void Post_InvalidData_ReturnsBadRequest()
+        public async Task Post_InvalidData_ReturnsBadRequest()
         {
             NotifyDto request = null;
 
-            var result = _controller.Post(request);
+            var result = await _controller.Post(request);
 
             Assert.NotNull(result);
             Assert.True(result is BadRequestResult);
