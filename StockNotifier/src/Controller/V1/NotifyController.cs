@@ -9,7 +9,7 @@ namespace StockNotifier.src.Controller.V1
     {
         // POST v1/api/<NotifyController>
         [HttpPost]
-        public IActionResult Post([FromBody] NotifyModel request)
+        public IActionResult Post([FromBody] NotifyDto request)
         {
             return Accepted();
         }
