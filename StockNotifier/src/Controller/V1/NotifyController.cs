@@ -36,7 +36,7 @@ namespace StockNotifier.src.Controller.V1
                     request.PriceTraded
                     );
 
-            var tickerInfo = _tickerInfoClient.GetTickerInfo( request.BrokerId );
+            var tickerInfo = _tickerInfoClient.GetTickerInfo( request.Ticker );
 
             return Accepted(tickerInfo);
         }
